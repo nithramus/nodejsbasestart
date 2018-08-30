@@ -1,0 +1,1 @@
+mysql -u$SQLLOGIN -p$SQLPASSWORD < $1

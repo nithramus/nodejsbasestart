@@ -1,0 +1,28 @@
+{
+  "name": "pinger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create_database": "export $(cat .env-dev | xargs) && sh database/exec.sh database/create",
+    "delete_database": "export $(cat .env-dev | xargs) && sh database/exec.sh database/delete",
+    "reset_database": "npm run delete_database && npm run create_database",
+    "start": "export $(cat .env-dev | xargs) && nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nithramus/pinger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nithramus/pinger/issues"
+  },
+  "homepage": "https://github.com/nithramus/pinger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6"
+  }
+}
