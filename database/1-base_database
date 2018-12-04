@@ -1,0 +1,21 @@
+USE expenses_share;
+CREATE TABLE expenses (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    spender_it INT,
+    recerver_id INT,
+    amont DOUBLE;
+    about TEXT,
+    created_at TIMESTAMP,
+    comment_id INT
+);
+CREATE TABLE users(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    username VARCHAR(255)
+);
+CREATE TABLE expense_comment (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    expense_id INT,
+    user_id INT,
+    content TEXT,
+    created_at TIMESTAMP
+);
